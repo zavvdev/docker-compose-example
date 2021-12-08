@@ -1,4 +1,4 @@
-Dockerized application with UI, API and NGINX services
+Dockerized application with UI, API and NGINX services.
 
 ## Requirements
 
