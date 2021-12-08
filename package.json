@@ -1,20 +1,20 @@
 {
 	"name": "next-nest-nginx-docker",
 	"version": "1.0.0",
-	"description": "Dockerized full-stack starter project.",
+	"description": "Dockerized application with UI, API and NGINX services",
 	"scripts": {
 		"prepare": "husky install"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zavvdev/next-nest-nginx-docker.git"
+		"url": "git+https://github.com/zavvdev/docker-nginx-example.git"
 	},
 	"author": "Igor Zaviryukha",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/zavvdev/next-nest-nginx-docker/issues"
+		"url": "https://github.com/zavvdev/docker-nginx-example/issues"
 	},
-	"homepage": "https://github.com/zavvdev/next-nest-nginx-docker#readme",
+	"homepage": "https://github.com/zavvdev/docker-nginx-example#readme",
 	"devDependencies": {
 		"husky": "^7.0.2"
 	}

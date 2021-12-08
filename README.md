@@ -1,4 +1,4 @@
-Dockerized full-stack starter project.
+Dockerized application with UI, API and NGINX services
 
 ## Requirements
 
