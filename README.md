@@ -13,7 +13,7 @@
 (For windows: `C:\Windows\System32\drivers\etc\hosts`)<br />
 Save the file.
 3. Run `make install` to install packages.
-4. Run `make up-prod` to create production build.
+4. Run `make up-prod` to create and start a production build (`helloworld.gg`).
 5. Run `make up` to start in dev mode (`helloworld.dev.gg`).
 
 ---
