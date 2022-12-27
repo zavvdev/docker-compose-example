@@ -1,37 +1,42 @@
 version: "3.9"
 services:
-  ui:
-    image: ${APP_NAME}_ui
+  client:
+    image: ${APP_NAME}_client
     build:
-      context: ./ui
-    container_name: ${APP_NAME}_ui
-    command: npm run deploy
+      context: ./client
+    container_name: ${APP_NAME}_client
+    command: pnpm prod
     restart: unless-stopped
+    environment:
+      - VITE_PORT=${CLIENT_PORT}
+      - VITE_HMR_PORT=${CLIENT_HMR_PORT}
     networks:
       - common
 
-  api:
-    image: ${APP_NAME}_api
+  server:
+    image: ${APP_NAME}_server
     build:
-      context: ./api
-    environment:
-      - PORT=${API_PORT}
-    container_name: ${APP_NAME}_api
-    command: npm run deploy
+      context: ./server
+    container_name: ${APP_NAME}_server
+    command: pnpm start:prod
     restart: unless-stopped
+    environment:
+      - PORT=${SERVER_PORT}
     networks:
       - common
 
   nginx:
-    image: nginx:stable-alpine
+    image: ${APP_NAME}_nginx
+    build:
+      context: ./nginx
     container_name: ${APP_NAME}_nginx
     ports:
       - "80:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
     depends_on:
-      - api
-      - ui
+      - server
+      - client
     networks:
       - common
 

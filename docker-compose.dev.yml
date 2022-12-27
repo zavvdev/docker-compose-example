@@ -1,14 +1,20 @@
 version: "3.9"
 services:
-  ui:
-    command: npm run dev
+  client:
+    command: pnpm dev
     stdin_open: true
     tty: true
+    ports:
+      - ${CLIENT_HMR_PORT}:${CLIENT_PORT}
     volumes:
-      - ./ui/src:/usr/src/app/src
+      - ./client/src:/usr/src/app/src
 
-  api:
-    command: npm run start:dev
+  server:
+    command: pnpm start:dev
     volumes:
-      - ./api/src:/usr/src/app/src
-      - ./api/test:/usr/src/app/test
+      - ./server/src:/usr/src/app/src
+      - ./server/dist:/usr/src/app/dist
+
+  nginx:
+    volumes:
+      - ./nginx/nginx.dev.conf:/etc/nginx/conf.d/nginx.conf

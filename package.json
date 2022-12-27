@@ -1,21 +1,21 @@
 {
-	"name": "next-nest-nginx-docker",
+	"name": "helloworld",
 	"version": "1.0.0",
-	"description": "Dockerized application with UI, API and NGINX services",
+	"description": "Realtime chat",
 	"scripts": {
 		"prepare": "husky install"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zavvdev/docker-nginx-example.git"
+		"url": "git+https://github.com/zavvdev/helloworld.git"
 	},
 	"author": "Igor Zaviryukha",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/zavvdev/docker-nginx-example/issues"
+		"url": "https://github.com/zavvdev/helloworld/issues"
 	},
-	"homepage": "https://github.com/zavvdev/docker-nginx-example#readme",
+	"homepage": "https://github.com/zavvdev/helloworld#readme",
 	"devDependencies": {
-		"husky": "^7.0.2"
+		"husky": "^8.0.2"
 	}
 }

@@ -1,4 +1,3 @@
 {
-	"eslint.workingDirectories": ["./ui", "./api"],
-	"cSpell.words": ["Prefetch"]
+	"eslint.workingDirectories": ["./client", "./server"],
 }

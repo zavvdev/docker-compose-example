@@ -1,5 +1,3 @@
-Dockerized application with UI, API and NGINX services.
-
 ## Requirements
 
 - install docker
@@ -9,19 +7,28 @@ Dockerized application with UI, API and NGINX services.
 ### Setup project
 
 1. Copy `.env.example` file and rename it to `.env`.
-2. Open the terminal and go to `/etc` folder of your linux machine. Type `sudo nano hosts`. In opened file provide one more host name for 127.0.0.1 ip address: `127.0.0.1 nnn-docker.com`. Save the file.
-3. Open terminal in the root project folder. Type `make deploy` to create production build via docker.
-4. Deployed application will be available on the `nnn-docker.com` address that you previously specified.
+2. Open the terminal and go to `/etc` folder. Type `sudo nano hosts`. In opened file provide two host names for 127.0.0.1 ip address:<br/>
+`127.0.0.1 helloworld.dev.gg` - dev<br/>
+`127.0.0.1 helloworld.gg`- prod (you can replace with your production url)<br/>
+(For windows: `C:\Windows\System32\drivers\etc\hosts`)<br />
+Save the file.
+3. Run `make install` to install packages.
+4. Run `make deploy` to create production build.
+5. Run `make up` to start in dev mode (`helloworld.dev.gg`).
 
 ---
 
 **NOTE**
 
-`nginx/nginx.conf` file by default can't access to environment variables. So, if you change something in `.env` file make sure to update nginx.conf accordingly.
+`nginx/nginx.conf` file by default can't access to environment variables. So, if you change something in `.env` file make sure to update `nginx.conf` and `nginx.dev.conf` accordingly.
 
 ---
 
 ## Commands:
+
+### ✔ make install
+
+Install all required modules
 
 ### ✔ make deploy
 
@@ -43,16 +50,22 @@ Start all existing containers
 
 Stop containers and remove containers, networks, volumes, and images created by 'deploy' or 'up'
 
+### ✔ make lint-client
+
+Run linter for client
+
+### ✔ make lint-server
+
+Run linter for server
+
+### ✔ make lint
+
+Run linters for client & server
+
 ---
 
 **NOTE**
 
 Take a look at `.vscode/settings.json` file if you using Visual Studio Code editor. You should provide `"eslint.workingDirectories"` setting with all inner project folders that using eslint because by default eslint looking to the root folder.
-
----
-
-**NOTE**
-
-Create `*.local` copies of the `.env` files for local development.
 
 ---
