@@ -3,7 +3,7 @@ install:
 	pnpm install -r
 
 # Create a production build
-deploy:
+up-prod:
 	docker-compose up --build -d
 
 # Start in development mode
@@ -18,7 +18,7 @@ stop:
 start:
 	docker-compose start
 
-# Stop containers and remove containers, networks, volumes, and images created by 'deploy' or 'up'
+# Stop containers and remove containers, networks, volumes, and images created by 'up-prod' or 'up'
 down:
 	docker-compose down --rmi all -v
 

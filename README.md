@@ -13,7 +13,7 @@
 (For windows: `C:\Windows\System32\drivers\etc\hosts`)<br />
 Save the file.
 3. Run `make install` to install packages.
-4. Run `make deploy` to create production build.
+4. Run `make up-prod` to create production build.
 5. Run `make up` to start in dev mode (`helloworld.dev.gg`).
 
 ---
@@ -30,9 +30,9 @@ Save the file.
 
 Install all required modules
 
-### ✔ make deploy
+### ✔ make up-prod
 
-Create a production build
+Create and start a production build
 
 ### ✔ make up
 
@@ -48,7 +48,7 @@ Start all existing containers
 
 ### ✔ make down
 
-Stop containers and remove containers, networks, volumes, and images created by 'deploy' or 'up'
+Stop containers and remove containers, networks, volumes, and images created by 'up-prod' or 'up'
 
 ### ✔ make lint-client
 
