@@ -1,20 +1,20 @@
 {
 	"name": "helloworld",
 	"version": "1.0.0",
-	"description": "Realtime chat",
+	"description": "Docker-Compose example",
 	"scripts": {
 		"prepare": "husky install"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/zavvdev/helloworld.git"
+		"url": "git+https://github.com/zavvdev/docker-compose-example.git"
 	},
 	"author": "Igor Zaviryukha",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/zavvdev/helloworld/issues"
+		"url": "https://github.com/zavvdev/docker-compose-example/issues"
 	},
-	"homepage": "https://github.com/zavvdev/helloworld#readme",
+	"homepage": "https://github.com/zavvdev/docker-compose-example#readme",
 	"devDependencies": {
 		"husky": "^8.0.2"
 	}
