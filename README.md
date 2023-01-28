@@ -3,6 +3,7 @@
 - install docker
 - install docker-compose
 - install make
+- install pnpm
 
 ### Setup project
 
